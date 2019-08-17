@@ -1,0 +1,8 @@
+<AGMModel>
+	<symbol id="0" type="robot">
+	</symbol>
+	<symbol id="1" type="Room">
+	</symbol>
+	<link src="1" dst="0" label="RR"> </link>
+	<link src="1" dst="1" label="sR"> </link>
+</AGMModel>

@@ -1,0 +1,8 @@
+Component room_handler
+{
+	Communications
+	{
+	};
+	language Python;
+	options agmagent;
+};

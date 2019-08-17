@@ -1,0 +1,8 @@
+Component human_interaction_handler
+{
+	Communications
+	{
+	};
+	language Python;
+	options agmagent;
+};

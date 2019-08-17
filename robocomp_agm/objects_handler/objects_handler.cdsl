@@ -1,0 +1,8 @@
+Component objects_handler
+{
+	Communications
+	{
+	};
+	language Python;
+	options agmagent;
+};

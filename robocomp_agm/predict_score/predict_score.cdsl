@@ -1,0 +1,10 @@
+
+Component predict_score
+{
+	Communications
+	{
+	};
+	language Python;
+	gui Qt(QWidget);
+	options agmagent;
+};
