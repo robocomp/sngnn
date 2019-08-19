@@ -1,0 +1,24 @@
+fontName=Arial
+fontSize=14
+lineThickness=2.0
+longPattern=3
+name=empty
+nodeThickness=2.0
+shortPattern=1
+spacePattern=3
+vertexDiameter=40.0
+===
+types
+{
+(robot)
+}
+===
+rule : active(1)
+{
+	{
+	}
+	=>
+	{
+	}
+}
+
