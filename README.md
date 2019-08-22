@@ -2,9 +2,7 @@
 
 SNGNN: A graph neural network for social navigation conventions
 
-<p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QVvuywgomTE" frameborder="0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
+[![VIDEO](https://raw.githubusercontent.com/robocomp/sngnn/master/video.png)](https://www.youtube.com/embed/QVvuywgomTE "Everything Is AWESOME")
 
 ## Introduction
 
