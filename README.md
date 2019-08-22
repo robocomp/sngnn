@@ -2,6 +2,9 @@
 
 SNGNN: A graph neural network for social navigation conventions
 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QVvuywgomTE"  frameborder="0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Introduction
 
 The document describes how to use SNGNN, a graph neural network trained to estimate the compliance of social navigation scenarios.
