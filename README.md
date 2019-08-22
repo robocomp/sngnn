@@ -2,7 +2,9 @@
 
 SNGNN: A graph neural network for social navigation conventions
 
-<div><iframe width="560" height="315" src="https://www.youtube.com/embed/QVvuywgomTE" frameborder="0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QVvuywgomTE" frameborder="0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 ## Introduction
 
