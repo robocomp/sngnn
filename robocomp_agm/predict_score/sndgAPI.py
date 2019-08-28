@@ -41,15 +41,15 @@ class SNGNN():
         self.params = pickle.load(open('../../SNGNN_PARAMETERS.prms', 'rb'), fix_imports=True)
         self.GNNmodel = pg_rgcn_gat.PRGAT(self.params[5],
                     self.params[7],
-                    5,
+                    self.params[8][0],
                     self.params[14],
-                    self.params[14], #num_rels?   # TODO: Add variable
-                    142,
-                    int(6/2),
-                    int(6/2),
-                    0.001,
-                    F.relu,
-                    0.12,
+                    self.params[14],
+                    self.params[6],
+                    int(self.params[4]/2),
+                    int(self.params[4]/2),
+                    self.params[10],
+                    self.params[9],
+                    self.params[12],
                     bias=True
                     )
         self.GNNmodel.load_state_dict(torch.load('../../SNGNN_MODEL.tch', map_location='cpu'))
