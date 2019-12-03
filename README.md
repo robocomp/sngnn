@@ -2,7 +2,7 @@
 
 SNGNN: A graph neural network for social navigation conventions
 
-A brief description of the motivations and some results (including several videos) can be found in [https://ljmanso.com/sngnn](https://ljmanso.com/sngnn).
+__A brief description of the motivations and some results (including several videos) can be found in [https://ljmanso.com/sngnn](https://ljmanso.com/sngnn).__
 
 [![VIDEO](https://raw.githubusercontent.com/robocomp/sngnn/master/video.png)](https://www.youtube.com/embed/QVvuywgomTE "Everything Is AWESOME")
 
