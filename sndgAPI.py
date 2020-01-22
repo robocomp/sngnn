@@ -144,8 +144,8 @@ class SNScenario():
         self.objects.append(sn_object)
 
     def add_interaction(self, sn_interactions):
-        h_l = [i.id for i in self.humans]
-        o_l = [i.id for i in self.objects]
+        h_l = [human.id for human in self.humans]
+        o_l = [object.id for object in self.objects]
         s = sn_interactions[0]
         d = sn_interactions[1]
         if (s in h_l and d in o_l) or (s in h_l and d in h_l):
