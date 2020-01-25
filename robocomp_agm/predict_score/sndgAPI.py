@@ -37,7 +37,8 @@ def collate(sample):
 
 
 class SNGNN():
-    def __init__(self):
+    def __init__(self, device_='cpu'):
+        self.device = torch.device(device_)
         self.params = pickle.load(open('../../SNGNN_PARAMETERS.prms', 'rb'), fix_imports=True)
         self.GNNmodel = pg_rgcn_gat.PRGAT(self.params[5],
                     self.params[7],
@@ -52,7 +53,7 @@ class SNGNN():
                     self.params[12],
                     bias=True
                     )
-        self.GNNmodel.load_state_dict(torch.load('../../SNGNN_MODEL.tch', map_location='cpu'))
+        self.GNNmodel.load_state_dict(torch.load('../../SNGNN_MODEL.tch', map_location=device_))
         self.GNNmodel.eval()
 
     def makeJson(self,sn_scenario):
@@ -96,15 +97,14 @@ class SNGNN():
         return self.jsonmodel
 
     def predict(self, sn_scenario):
-        device = torch.device("cpu")#For gpu change it to cuda
         jsonmodel = self.makeJson(sn_scenario)
         graph_type = 'relational'
         train_dataset = socnav.SocNavDataset(jsonmodel, mode='train', alt=graph_type)
         train_dataloader = DataLoader(train_dataset, batch_size=1, collate_fn=collate)
         for batch, data in enumerate(train_dataloader):
             subgraph, feats, labels = data
-            feats = feats.to(device)
-            data = Data(x=feats.float(),edge_index=torch.stack(subgraph.edges()).to(device),edge_type=subgraph.edata['rel_type'].squeeze().to(device))
+            feats = feats.to(self.device)
+            data = Data(x=feats.float(),edge_index=torch.stack(subgraph.edges()).to(self.device),edge_type=subgraph.edata['rel_type'].squeeze().to(self.device))
             logits = self.GNNmodel(data)[0].detach().numpy()[0]
             score = logits*100
             if score > 100:
@@ -134,11 +134,22 @@ class SNScenario():
         self.humans = []
         self.objects = []
         self.interactions = []
+
     def add_room(self, sn_room):
         self.room  = sn_room
+
     def add_human(self, sn_human):
         self.humans.append(sn_human)
+
     def add_object(self, sn_object):
         self.objects.append(sn_object)
+
     def add_interaction(self, sn_interactions):
-        self.interactions.append(sn_interactions)
+        h_l = [human.id for human in self.humans]
+        o_l = [object.id for object in self.objects]
+        s = sn_interactions[0]
+        d = sn_interactions[1]
+        if (s in h_l and d in o_l) or (s in h_l and d in h_l):
+            self.interactions.append(sn_interactions)
+        else:
+            raise ValueError('Invalid Interaction. Allowed Interactions: Human-Human and Human-Object')

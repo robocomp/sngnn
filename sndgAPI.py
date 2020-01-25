@@ -151,4 +151,4 @@ class SNScenario():
         if (s in h_l and d in o_l) or (s in h_l and d in h_l):
             self.interactions.append(sn_interactions)
         else:
-            raise ValueError('Invalid Interaction')
+            raise ValueError('Invalid Interaction. Allowed Interactions: Human-Human and Human-Object')
