@@ -30,7 +30,7 @@ To contribute to the dataset you will need the unlabelled dataset file (_socnav-
 - NumPy
 
 #### Running the program
-To run the program we suggest to copy the input file to a temporary file that will be updated automatically by the script (You can use socnav_test_small.json here):
+To run the program we suggest to copy the input file to a temporary file that will be updated automatically by the script (You can use test.json here instead of socnav-unlabelled.json):
 > cp socnav-unlabelled.json saved.json
 
 The script is run as in the following command:
