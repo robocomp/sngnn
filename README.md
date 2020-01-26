@@ -146,6 +146,9 @@ Add humans with instance of Human class(id,x-coordinate,y-coordinate,orientation
 Add objects with instance of Object class(id,x-coordinate,y-coordinate,orientation).
 Add interactions with a list of source_index and destination_index as [src_index,dst_index].
 Pass scenario to sngnn and then call predict method and you will obtain the score.
+Assumptions:
+We only allow valid interactions which include Human-Human Interaction and Human-Object Interaction.
+The coordinate system is relative with respect to the position of the robot which is (0,0).
 '''
 
 sn = SNScenario()
