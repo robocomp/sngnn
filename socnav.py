@@ -637,7 +637,7 @@ class SocNavGraph(DGLGraph):
 
 
 class SocNavDataset(object):
-    def __init__(self, path, mode, alt, init_line=-1, end_line=-1):
+    def __init__(self, path, mode, alt, init_line=-1, end_line=-1, verbose=True):
         super(SocNavDataset, self).__init__()
         self.path = path
         self.mode = mode
@@ -646,8 +646,10 @@ class SocNavDataset(object):
         self.end_line = end_line
         self.data = []
         self.num_rels = -1
+        self.verbose = verbose
         self._load(alt)
         self._preprocess()
+
 
 
     def _load(self, alt):
@@ -668,7 +670,8 @@ class SocNavDataset(object):
                 #     print(linen)
         else:
             self.data.append(SocNavGraph(self.path, alt))
-        print('{} scenarios loaded.'.format(len(self.data)))
+        if self.verbose:
+            print('{} scenarios loaded.'.format(len(self.data)))
         self.num_rels = self.data[0].num_rels
         self.graph = dgl.batch(self.data)
         self.features = torch.from_numpy(np.concatenate([element.features for element in self.data]))
