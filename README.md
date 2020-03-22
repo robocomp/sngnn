@@ -8,7 +8,7 @@ __A brief description of the motivations and some results (including several vid
 
 ## Introduction
 
-The document describes how to use SNGNN, a graph neural network trained to estimate the compliance of social navigation scenarios.
+The document describes how to use SNGNN, a graph neural network trained to estimate the compliance of social navigation scenarios. If you want to train the model you'll need the dataset which is available here [(https://github.com/ljmanso/SocNav1).](https://github.com/ljmanso/SocNav1) Place the appropriate files in the directory.
 
 
 ## Software requirements
