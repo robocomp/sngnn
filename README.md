@@ -13,20 +13,23 @@ The document describes how to use SNGNN, a graph neural network trained to estim
 
 ## Software requirements
 1. PyTorch [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
-2. Dgl [https://www.dgl.ai/pages/start.html](https://www.dgl.ai/pages/start.html)
+2. DGL [https://www.dgl.ai/pages/start.html](https://www.dgl.ai/pages/start.html)
 3. Rdflib (`pip install rdflib`)
 4. PyTorch Geometric [https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
 
+## Testing the system on ramdomly-generated scenes
+Simply use the command line to get to the repository source code, then get into the `scenario_editor` directory and run the `sndg.py` script. It is the script that was used to generate the dataset used, but it can also be used to generate random scenes and test the results:
+```
+cd scenario_editor
+python3 sndg.py
+```
+Once the interface shows up, you just need to check the `automatically estimate` checkbox. Every time you click on `get new sample` a new scene will appear and will be assessed automatically.
 
 ## Integrating the network in your projects
 
 Support is provided only for Python, as pytorch-geometric only supports Python.
 
-
 ### Python
-
-
-
 
 1. Import the model and some dependencies
 
