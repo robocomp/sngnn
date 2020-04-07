@@ -159,6 +159,7 @@ class SNDG_APP(QtWidgets.QMainWindow):
     def populateWorld(self):
         if self.dataset is None:
             self.world = WorldGenerator()
+            self.current_line = json.dumps(self.world.serialize())
         else:
             try:
                 self.current_line = self.dataset.pop(0)
