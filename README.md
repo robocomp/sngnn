@@ -25,6 +25,19 @@ python3 sndg.py
 ```
 Once the interface shows up, you just need to check the `automatically estimate` checkbox. Every time you click on `get new sample` a new scene will appear and will be assessed automatically.
 
+## Please, cite our paper if you find this useful
+Please, cite our [paper](https://arxiv.org/abs/1909.09003) if you find this useful.
+```
+@misc{manso2019graph,
+    title={Graph Neural Networks for Human-aware Social Navigation},
+    author={Luis J. Manso and Ronit R. Jorvekar and Diego R. Faria and Pablo Bustos and Pilar Bachiller},
+    year={2019},
+    eprint={1909.09003},
+    archivePrefix={arXiv},
+    primaryClass={cs.RO}
+}
+```
+
 ## Integrating the network in your projects
 
 Support is provided only for Python, as pytorch-geometric only supports Python.
@@ -161,4 +174,17 @@ sn.add_object(Object(2,0,10,10))
 sn.add_interaction([1,2])
 sngnn = SNGNN()
 print(sngnn.predict(sn))
+```
+
+## Please, cite our paper if you find this useful
+Please, cite our [paper](https://arxiv.org/abs/1909.09003) if you find this useful.
+```
+@misc{manso2019graph,
+    title={Graph Neural Networks for Human-aware Social Navigation},
+    author={Luis J. Manso and Ronit R. Jorvekar and Diego R. Faria and Pablo Bustos and Pilar Bachiller},
+    year={2019},
+    eprint={1909.09003},
+    archivePrefix={arXiv},
+    primaryClass={cs.RO}
+}
 ```
