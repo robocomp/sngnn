@@ -17,7 +17,7 @@ The document describes how to use SNGNN, a graph neural network trained to estim
 3. Rdflib (`pip install rdflib`)
 4. PyTorch Geometric [https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
 
-## Testing the system on ramdomly-generated scenes
+## Testing the system on randomly-generated scenes
 Simply use the command line to get to the repository source code, then get into the `scenario_editor` directory and run the `sndg.py` script. It is the script that was used to generate the dataset used, but it can also be used to generate random scenes and test the results:
 ```
 cd scenario_editor
