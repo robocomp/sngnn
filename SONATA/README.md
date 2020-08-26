@@ -29,6 +29,7 @@ After cloning the directory, execute the following commands:
 After you run the above commands the SONATA GUI opens up.
 
 1. Write the contributor's(user's) name so that the data saved can be marked by the users name.
+
 ![contributor](./images/get_contributer.png)
 
 2. After this the simulation will start with a green tint, and until the mouse controller is clicked robot will not move. 
