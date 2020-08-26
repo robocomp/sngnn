@@ -33,17 +33,22 @@ After you run the above commands the SONATA GUI opens up.
 ![contributor](./images/get_contributer.png)
 
 2. After this the simulation will start with a green tint, and until the mouse controller is clicked robot will not move. 
+
 ![simulator](./images/simulation_green_start.png)
 
 3. Select the configuration from the top bar of the SONATA GUI to select the range of different entities you want to add in the scene.
+
 ![configuration](./images/select_range.png)
 
 4. click on the mouse controller and hold the left key and drag the mouse to move the robot in that direction.
+
 ![mouse](./images/click_joystick.png)
 
 5. Move the robot to the goal marked by the cone.
+
 ![goal](./images/reach_goal.png)
 
 6. Save your data.
+
 ![save](./images/save.png)
 
