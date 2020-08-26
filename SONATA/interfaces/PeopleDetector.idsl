@@ -1,0 +1,20 @@
+module RoboCompPeopleDetector
+{
+	struct Person
+	{
+        int id;      // might be arbitrary
+        float x;     // values
+        float y;
+        float angle;
+        float ix;    // increments
+        float iy;
+        float iangle;
+	};
+
+	sequence<Person> PeopleList;
+    
+	interface PeopleDetector
+	{
+		void gotpeople(PeopleList lst);
+	};
+};

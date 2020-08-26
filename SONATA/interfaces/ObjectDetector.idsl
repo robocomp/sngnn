@@ -1,0 +1,24 @@
+module RoboCompObjectDetector
+{
+	struct ObjectT
+	{
+        int id;      // might be arbitrary
+        float x;     // values
+        float y;
+        float angle;
+        float ix;    // increments
+        float iy;
+        float iangle;
+        float bbx1;
+        float bby1;
+        float bbx2;
+        float bby2;
+	};
+
+	sequence<ObjectT> ObjectList;
+    
+	interface ObjectDetector
+	{
+		void gotobjects(ObjectList lst);
+	};
+};

@@ -1,0 +1,15 @@
+import "OmniRobot.idsl";
+import "PeopleDetector.idsl";
+import "Simulator.idsl";
+
+Component simulator
+{
+    Communications
+    {
+        implements OmniRobot, Simulator;
+        publishes PeopleDetector;
+
+    };
+	language python;
+};
+

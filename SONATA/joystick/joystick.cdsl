@@ -1,0 +1,14 @@
+import "OmniRobot.idsl";
+import "JoystickAdapter.idsl";
+
+Component joystick
+{
+    Communications
+    {
+        requires OmniRobot, OmniRobot;
+	publishes JoystickAdapter;
+    };
+    language python;
+
+};
+
