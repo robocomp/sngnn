@@ -90,7 +90,7 @@ The data is stored in the form of JSON files, with the following structure:
 1. PyTorch [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
 2. DGL [https://www.dgl.ai/pages/start.html](https://www.dgl.ai/pages/start.html)
 3. PyTorch Geometric [https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
-4. CoppeliaSim [https://www.coppeliarobotics.com/](https://github.com/stepjam/PyRep)
+4. CoppeliaSim [https://github.com/stepjam/PyRep](https://github.com/stepjam/PyRep)
 
 # Running the repo
 
