@@ -21,7 +21,6 @@ After cloning the directory, execute the following commands:
     ```
 2. Run the tool.
     ```
-    cd ..
     bash run.sh
     ```
 
