@@ -1,0 +1,23 @@
+import "PeopleDetector.idsl";
+import "ObjectDetector.idsl";
+import "InteractionDetector.idsl";
+import "WallDetector.idsl";
+import "ByteSequencePublisher.idsl";
+import "GoalPublisher.idsl";
+import "Simulator.idsl";
+import "JoystickAdapter.idsl";
+import "OmniRobot";
+
+Component controller
+{
+    Communications
+    {
+        subscribesTo PeopleDetector, ObjectDetector, InteractionDetector, WallDetector, GoalPublisher, ByteSequencePublisher, JoystickAdapter;
+        requires Simulator, OmniRobot;
+    };
+
+    language python;
+    gui Qt(QWidget);
+
+};
+

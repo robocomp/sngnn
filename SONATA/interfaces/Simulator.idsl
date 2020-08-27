@@ -1,0 +1,8 @@
+module RoboCompSimulator
+{
+	interface Simulator
+	{
+		void regenerate(string scene);
+	};
+};
+

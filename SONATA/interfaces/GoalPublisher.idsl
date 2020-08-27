@@ -1,0 +1,13 @@
+module RoboCompGoalPublisher
+{
+	struct GoalT
+	{
+        float x;     // values
+        float y;
+	};
+
+	interface GoalPublisher
+	{
+		void goalupdated(GoalT goal);
+	};
+};

@@ -1,0 +1,16 @@
+module RoboCompInteractionDetector
+{
+	struct InteractionT
+	{
+        int idSrc;
+        string type;
+        int idDst;
+	};
+
+	sequence<InteractionT> InteractionList;
+    
+	interface InteractionDetector
+	{
+		void gotinteractions(InteractionList lst);
+	};
+};

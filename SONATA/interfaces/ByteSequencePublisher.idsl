@@ -1,0 +1,10 @@
+module RoboCompByteSequencePublisher
+{
+
+	sequence<byte> bytesequence;
+
+	interface ByteSequencePublisher
+	{
+		void newsequence(bytesequence bs);
+	};
+};
