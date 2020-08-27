@@ -90,7 +90,7 @@ The data is stored in the form of JSON files, with the following structure:
 1. PyTorch [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
 2. DGL [https://www.dgl.ai/pages/start.html](https://www.dgl.ai/pages/start.html)
 3. PyTorch Geometric [https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html](https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html)
-4. CoppeliaSim [https://github.com/stepjam/PyRep](https://github.com/stepjam/PyRep)
+4. PyRep [https://github.com/stepjam/PyRep](https://github.com/stepjam/PyRep) (This link would also help in the installation of CoppeliaSim)
 
 # Running the repo
 
@@ -117,7 +117,7 @@ After you run the above commands the SONATA GUI opens up.
 
 ![simulator](./images/simulation_green_start.png)
 
-3. Select the configuration from the top bar of the SONATA GUI to select the range of different entities you want to add in the scene.
+3. Select the configuration from the top bar of the SONATA GUI to select the range of different entities you want to add in the scene. You can also regenerate a scene if you don't like the settings of entities by using the regenerate button from the top bar. We also provided blue lines between two entities to show that they are interacting with each other.
 
 ![configuration](./images/select_range.png)
 
@@ -132,4 +132,7 @@ After you run the above commands the SONATA GUI opens up.
 6. Save your data.
 
 ![save](./images/save.png)
+
+
+After you click and save the data, a JSON file is generated and the full episode gets saved with timestamps. For the usecase we take these JSONs and convert them into graphs using socnavData data loader, which is then fed into the GNNs. Once the model is trained you can run the toolkit in test mode by setting TEST_MODE boolean to true in the controller's specificworker.py file.
 
