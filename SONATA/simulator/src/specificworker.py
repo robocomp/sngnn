@@ -34,7 +34,7 @@ from pyrep.objects.object import Object
 
 import _pickle as pickle
 
-sys.path.append('../..')
+sys.path.append('../python')
 
 from sonata import SODA
 
