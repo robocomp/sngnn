@@ -204,11 +204,12 @@ class SODA():
                         ([length, -length, 0.4], [length, -2*length, 0.4]), # bottom right connecting the upper right most
                         ([length, -2*length, 0.4], [2*length, -2*length, 0.4]), # upper right most
                         ([2*length, -2*length, 0.4], [2*length, -length, 0.4]), # up right connecting the upper right most
-                        ([2*length,  length, 0.4], [2*length, -length, 0.4]), # top 
-                        ([length,  length, 0.4], [ 2*length,  length, 0.4]), # up left
+                        ([2*length, -length, 0.4], [2*length,  length, 0.4]), # top 
+                        ([ 2*length,  length, 0.4], [length,  length, 0.4]), # up left
+                        ([ length,  length, 0.4], [-length,  length, 0.4]), # left bottom
                         ([-length,  length, 0.4], [-length, -length, 0.4]), # bottom
                         ([-length,  -length, 0.4], [ length, -length, 0.4]), # right bottom
-                        ([-length,  length, 0.4], [ length,  length, 0.4]) # left bottom
+
                     ]
 
 
