@@ -38,7 +38,7 @@ def collate(sample):
 class SNGNN():
     def __init__(self, device_='cpu'):
         self.device = torch.device(device_)
-        self.params = pickle.load(open('SNGNN_PARAMETERS.prms', 'rb'), fix_imports=True)
+        self.params = pickle.load(open(os.path.join(os.path.dirname(__file__), 'SNGNN_PARAMETERS.prms'), 'rb'), fix_imports=True)
         self.GNNmodel = pg_rgcn_gat.PRGAT(self.params[5],
                     self.params[7],
                     self.params[8][0],
@@ -52,7 +52,7 @@ class SNGNN():
                     self.params[12],
                     bias=True
                     )
-        self.GNNmodel.load_state_dict(torch.load('SNGNN_MODEL.tch', map_location=device_))
+        self.GNNmodel.load_state_dict(torch.load(os.path.join(os.path.dirname(__file__), 'SNGNN_MODEL.tch'), map_location=device_))
         self.GNNmodel.eval()
 
     def makeJson(self,sn_scenario):
