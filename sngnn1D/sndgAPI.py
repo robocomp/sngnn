@@ -20,9 +20,9 @@ from torch.utils.data import DataLoader
 import dgl
 import torch
 import numpy as np
-import sys
+import sys, os
 import socnav
-sys.path.append('models')
+sys.path.append(os.path.join(os.path.dirname(__file__),'models'))
 import pg_rgcn_gat
 import pickle
 import torch.nn.functional as F
