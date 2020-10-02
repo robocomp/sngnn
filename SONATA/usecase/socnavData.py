@@ -276,7 +276,7 @@ class RoomGraph(DGLGraph):
 
 
 class GenerateDataset(object):
-    def __init__(self, path, mode, alt, init_line=-1, end_line=-1, verbose=True, debug=False, i_frame=0):
+    def __init__(self, path, mode, alt, init_line=-1, end_line=-1, verbose=True, debug=False, i_frame=0, assign_data = False):
         super(GenerateDataset, self).__init__()
         self.path = path
         self.mode = mode
@@ -286,6 +286,7 @@ class GenerateDataset(object):
         self.data = []
         self.num_rels = -1
         self.debug = debug
+        self.assign_data = assign_data
         try:
             if self.mode != 'run':
                 self.load_from_file()
@@ -331,6 +332,8 @@ class GenerateDataset(object):
                 linen = self.load_from_json(ds, alt, mode, linen)
                 if linen + 1 >= limit:
                     break
+        elif self.assign_data:
+            self.data = self.path
 
         elif type(self.path) == list and type(self.path[0]) == str:
             self.data.append(RoomGraph(json.loads(self.path[0]), alt, mode))
