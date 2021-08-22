@@ -1,0 +1,31 @@
+#VRML_OBJ R2021a utf8
+DEF SEEDNAME Solid {
+  translation SEEDX 0 SEEDZ
+  rotation 0 1 0 0
+  children [
+    DEF DESK_GROUP Group {
+      children [
+        Keyboard {
+          translation 0.18 0.71 0.1
+          rotation 0 1 0 -1.5707953071795862
+        }
+        Monitor {
+          translation -0.0599999 0.71 0.07
+          rotation 0 1 0 -1.5707953071795862
+        }
+        DesktopComputer {
+          translation -3.56862e-07 0.71 -0.35
+          rotation 0 1 0 -1.5707953071795862
+        }
+        ComputerMouse {
+          translation 0.189999 0.71 -0.18
+          rotation 0 1 0 -1.5707953071795862
+        }
+        Desk {
+          rotation 0 1 0 1.5708
+        }
+      ]
+    }
+  ]
+  name "SEEDNAME"
+}

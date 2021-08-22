@@ -1,0 +1,5 @@
+#VRML_OBJ R2021a utf8
+DEF SEEDNAME PottedTree {
+  translation SEEDX 0 SEEDZ
+    rotation 0 1 0 0
+}

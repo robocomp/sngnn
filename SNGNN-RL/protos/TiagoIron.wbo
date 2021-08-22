@@ -1,0 +1,20 @@
+#VRML_OBJ R2019a utf8
+DEF ROBOT TiagoIron {
+  translation SEEDX 0.095 SEEDZ
+  rotation 1 0 0 -1.5708
+  controller "base_controller"
+  lidarSlot [
+    TouchSensor {
+      translation 0 0.5 0.2
+      name "main_sensor"
+      boundingObject Cylinder {
+        height 1
+        radius 0.3
+      }
+    }
+    Receiver {
+    }
+    Emitter {
+    }
+  ]
+}

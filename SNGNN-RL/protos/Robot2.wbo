@@ -1,0 +1,361 @@
+#VRML_OBJ R2021a utf8
+DEF ROBOT Robot {
+  translation SEEDX 0.101 SEEDZ
+  rotation 0 1 0 SEEDANGLE
+  controller "base_controller"
+  name "TIAGo Iron"
+  model "PAL Robotics - TIAGo Iron"
+  boundingObject Group {
+    children [
+      DEF BASE_BO Transform {
+        translation 0 0.06 0
+        rotation 1 0 0 0
+        children [
+          Shape {
+            geometry Cylinder {
+              height 0.276
+              radius 0.265
+            }
+          }
+        ]
+      }
+    ]
+  }
+  physics Physics {
+    density -1
+    mass 28.26649
+  }
+  children [
+    Transform {
+        translation 0 0.06 0 
+        rotation 1 0 0 0
+        children [
+            Shape {
+                appearance PBRAppearance {
+                    baseColor 0.217647 0.145098 0.145098
+                    roughness 1
+                    metalness 0
+                }
+                geometry Cylinder {
+                  height 0.276
+                  radius 0.265
+                }
+            }
+        ]
+    }
+    TouchSensor {
+      translation 0 0.25 0
+      name "main_sensor"
+      boundingObject Cylinder {
+        height 0.5
+        radius 0.27
+      }
+    }
+    Transform {
+      rotation 0 1 0 -1.57
+      children [
+        Transform {
+          rotation 1 0 0 -1.57
+          children [
+            DEF CASTER_WHEEL_BACK_LEFT_JOINT HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0 0 1
+                anchor -0.1735 0.102 -0.0335
+                suspensionSpringConstant 25000
+                suspensionAxis 0 0 1
+              }
+              endPoint DEF CASTER_WHEEL_BACK_LEFT Solid {
+                translation -0.1735 0.102 -0.0335
+                rotation 0 0 1 0
+                children [
+                  DEF SMALL_WHEEL_JOINT HingeJoint {
+                    jointParameters HingeJointParameters {
+                      axis 0 1 0
+                      anchor -0.016 0 -0.04
+                    }
+                    endPoint DEF SMALL_WHEEL Solid {
+                      translation -0.016 0 -0.04
+                      rotation -1 0 0 1.5708
+                      name "caster_back_left_2_link"
+                      boundingObject DEF SMALL_WHEEL_BO Transform {
+                        rotation 1 0 0 1.570796
+                        children [
+                          Cylinder {
+                            height 0.015
+                            radius 0.025
+                          }
+                        ]
+                      }
+                      physics DEF SMALL_WHEEL_PHYSIC Physics {
+                        density -1
+                        mass 0.088558
+                      }
+                    }
+                  }
+                ]
+                name "caster_back_left_1_link"
+                boundingObject DEF CASTER_WHEEL_BO Transform {
+                  translation -0.003 0 -0.022
+                  children [
+                    DEF CASTER_SUPPORT_BO Box {
+                      size 0.036 0.032 0.04
+                    }
+                  ]
+                }
+                physics DEF CASTER_WHEEL_PHYSIC Physics {
+                  density -1
+                  mass 0.051448
+                }
+              }
+            }
+            DEF CASTER_WHEEL_BACK_RIGHT_JOINT HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0 0 1
+                anchor -0.1735 -0.102 -0.0335
+                suspensionSpringConstant 25000
+                suspensionAxis 0 0 1
+              }
+              endPoint DEF CASTER_WHEEL_BACK_RIGHT Solid {
+                translation -0.1735 -0.102 -0.0335
+                rotation 0 0 1 0
+                children [
+                  DEF SMALL_WHEEL_JOINT HingeJoint {
+                    jointParameters HingeJointParameters {
+                      axis 0 1 0
+                      anchor -0.016 0 -0.04
+                    }
+                    endPoint DEF SMALL_WHEEL_JOINT Solid {
+                      translation -0.016 0 -0.04
+                      rotation -1 0 0 1.5708
+                      name "caster_back_right_2_link"
+                      boundingObject DEF SMALL_WHEEL_BO Transform {
+                        rotation 1 0 0 1.570796
+                        children [
+                          Cylinder {
+                            height 0.015
+                            radius 0.025
+                          }
+                        ]
+                      }
+                      physics DEF SMALL_WHEEL_PHYSIC Physics {
+                        density -1
+                        mass 0.088558
+                      }
+                    }
+                  }
+                ]
+                name "caster_back_right_1_link"
+                boundingObject DEF CASTER_WHEEL_BO Transform {
+                  translation -0.003 0 -0.022
+                  children [
+                    DEF CASTER_SUPPORT_BO Box {
+                      size 0.036 0.032 0.04
+                    }
+                  ]
+                }
+                physics DEF CASTER_WHEEL_PHYSIC Physics {
+                  density -1
+                  mass 0.051448
+                }
+              }
+            }
+            DEF CASTER_WHEEL_FRONT_LEFT_JOINT HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0 0 1
+                anchor 0.1695 0.102 -0.0335
+                suspensionSpringConstant 25000
+                suspensionAxis 0 0 1
+              }
+              endPoint DEF CASTER_WHEEL_FRONT_LEFT Solid {
+                translation 0.1695 0.102 -0.0335
+                rotation 0 0 1 0
+                children [
+                  DEF SMALL_WHEEL_JOINT HingeJoint {
+                    jointParameters HingeJointParameters {
+                      axis 0 1 0
+                      anchor -0.016 0 -0.04
+                    }
+                    endPoint DEF SMALL_WHEEL Solid {
+                      translation -0.016 0 -0.04
+                      rotation -1 0 0 1.5708
+                      name "caster_front_left_2_link"
+                      boundingObject DEF SMALL_WHEEL_BO Transform {
+                        rotation 1 0 0 1.570796
+                        children [
+                          Cylinder {
+                            height 0.015
+                            radius 0.025
+                          }
+                        ]
+                      }
+                      physics DEF SMALL_WHEEL_PHYSIC Physics {
+                        density -1
+                        mass 0.088558
+                      }
+                    }
+                  }
+                ]
+                name "caster_front_left_1_link"
+                boundingObject DEF CASTER_WHEEL_BO Transform {
+                  translation -0.003 0 -0.022
+                  children [
+                    DEF CASTER_SUPPORT_BO Box {
+                      size 0.036 0.032 0.04
+                    }
+                  ]
+                }
+                physics DEF CASTER_WHEEL_PHYSIC Physics {
+                  density -1
+                  mass 0.051448
+                }
+              }
+            }
+            DEF LEFT_WHEEL_JOINT HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0 1 0
+                anchor 0 0.2022 0
+                suspensionAxis 0 0 1
+              }
+              device [
+                RotationalMotor {
+                  name "wheel_left_joint"
+                  acceleration 5.0762
+                  maxVelocity 10.1523
+                }
+                PositionSensor {
+                  name "wheel_left_joint_sensor"
+                }
+              ]
+              endPoint DEF LEFT_WHEEL Solid {
+                translation 0 0.202 0
+                rotation 1 0 0 1.5708
+                name "wheel_left_link"
+                boundingObject Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Cylinder {
+                      height 0.04
+                      radius 0.0985
+                    }
+                  ]
+                }
+                physics Physics {
+                  density -1
+                  mass 1.82362
+                }
+              }
+            }
+            DEF CASTER_WHEEL_FRONT_RIGHT_JOINT HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0 0 1
+                anchor 0.1695 -0.102 -0.0335
+                suspensionSpringConstant 25000
+                suspensionAxis 0 0 1
+              }
+              endPoint DEF CASTER_WHEEL_FRONT_RIGHT Solid {
+                translation 0.1695 -0.102 -0.0335
+                rotation 0 0 1 0
+                children [
+                  DEF SMALL_WHEEL_JOINT HingeJoint {
+                    jointParameters HingeJointParameters {
+                      axis 0 1 0
+                      anchor -0.016 0 -0.04
+                    }
+                    endPoint DEF SMALL_WHEEL Solid {
+                      translation -0.016 0 -0.04
+                      rotation -1 0 0 1.5708
+                      name "caster_front_right_2_link"
+                      boundingObject DEF SMALL_WHEEL_BO Transform {
+                        rotation 1 0 0 1.5708
+                        children [
+                          Cylinder {
+                            height 0.015
+                            radius 0.025
+                          }
+                        ]
+                      }
+                      physics DEF SMALL_WHEEL_PHYSIC Physics {
+                        density -1
+                        mass 0.088558
+                      }
+                    }
+                  }
+                ]
+                name "caster_front_right_1_link"
+                boundingObject DEF CASTER_WHEEL_BO Transform {
+                  translation -0.003 0 -0.022
+                  children [
+                    DEF CASTER_SUPPORT_BO Box {
+                      size 0.036 0.032 0.04
+                    }
+                  ]
+                }
+                physics DEF CASTER_WHEEL_PHYSIC Physics {
+                  density -1
+                  mass 0.051448
+                }
+              }
+            }
+            DEF RIGHT_WHEEL_JOINT HingeJoint {
+              jointParameters HingeJointParameters {
+                axis 0 1 0
+                anchor 0 -0.2022 0
+                suspensionAxis 0 0 1
+              }
+              device [
+                RotationalMotor {
+                  name "wheel_right_joint"
+                  acceleration 5.0762
+                  maxVelocity 10.1523
+                }
+                PositionSensor {
+                  name "wheel_right_joint_sensor"
+                }
+              ]
+              endPoint DEF RIGHT_WHEEL Solid {
+                translation 0 -0.202 0
+                rotation 1 0 0 1.5708
+                name "wheel_right_link"
+                boundingObject Transform {
+                  rotation 1 0 0 1.5708
+                  children [
+                    Cylinder {
+                      height 0.04
+                      radius 0.0985
+                    }
+                  ]
+                }
+                physics Physics {
+                  density -1
+                  mass 1.82362
+                }
+              }
+            }
+
+            InertialUnit {
+            }
+            Gyro {
+            }
+            Accelerometer {
+            }
+            DEF BODY_EXTENSION Transform {
+              translation -0.15 0 0.6
+              children [
+                Shape {
+                    appearance PBRAppearance {
+                        baseColor 0.117647 0.145098 0.245098
+                        roughness 1
+                        metalness 0
+                    }
+                  geometry Box {
+                    size 0.1 0.1 1
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+#VRML_OBJ R2021a utf8
+DEF SEEDNAME Pedestrian {
+  translation SEEDX 1.27 SEEDZ
+  rotation 0 1 0 ORIENT
+  name "SEEDNAME"
+  enableBoundingObject  TRUE
+  controller "pedestrian_2"
+  shirtColor 0.705882 0.303922 0.0235294
+  pantsColor 0.22549 0.390196 0.529412
+  shoesColor 0.560784 0.34902 0.00784314
+}

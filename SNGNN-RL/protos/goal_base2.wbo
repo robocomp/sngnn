@@ -1,0 +1,40 @@
+#VRML_OBJ R2021a utf8
+DEF GOAL Solid {
+  translation SEEDX 0.94 SEEDZ
+  children [
+    Transform {
+      rotation 1 0 0 3.14159
+      children [
+        Transform {
+          translation 0 0.94 0
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.45098 0.823529 0.0862745
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.01
+                radius 0.22
+              }
+            }
+          ]
+        }
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.937255 0.160784 0.160784
+            roughness 1
+            metalness 0
+          }
+          geometry Cone {
+            bottomRadius 0.2
+            height 0.7
+          }
+          isPickable FALSE
+        }
+
+      ]
+    }
+  ]
+}

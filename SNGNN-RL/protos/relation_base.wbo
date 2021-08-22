@@ -1,0 +1,20 @@
+#VRML_OBJ R2021a utf8
+DEF SEEDNAME Solid {
+  translation -1.17 0.02 -5.50956e-06
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.12549 0.290196 0.529412
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height SEEDX
+        radius 0.02
+      }
+    }
+  ]
+  name "SEEDNAME"
+  translationStep 0.001
+  rotationStep 0.1
+}

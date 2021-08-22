@@ -1,0 +1,31 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  basicTimeStep 50
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation -0.5776567755050868 -0.5771969549958945 -0.577196954995895 2.0939354039398
+  position 7.293630794393162e-47 26.649133370231752 -1.4793240726968938e-15
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Robot {
+  name "icebox"
+  controller "icebox_controller"
+}
+DEF supervisor Robot {
+  children [
+    Emitter {
+    }
+    Receiver {
+    }
+  ]
+  name "simulator_supervisor"
+  controller "simulator_supervisor_cpp"
+  controllerArgs [
+    "etc/config"
+  ]
+  supervisor TRUE
+}
